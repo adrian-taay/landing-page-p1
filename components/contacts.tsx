@@ -8,10 +8,11 @@ import {
   FaPhone,
   FaXTwitter,
 } from "react-icons/fa6";
+import { Contact } from "@/types";
 
 export function Contacts() {
-  const iconSize = 30;
-  const contactLinks = [
+  const iconSize: number = 28;
+  const contactLinks: Contact[] = [
     {
       name: "Email",
       icon: <FaEnvelope size={iconSize} />,
@@ -48,20 +49,20 @@ export function Contacts() {
     {
       id: "email",
       btnTitle: "Email Me",
-      href: "",
+      href: "https://gmail.com",
     },
     {
       id: "save",
       btnTitle: "Save Contact",
-      href: "",
+      href: "https://gmail.com",
     },
   ];
 
   return (
     <div className="flex flex-col items-center text-white gap-12">
-      <div className="grid grid-cols-3 text-center gap-8">
+      <div className="grid grid-cols-3 text-center gap-8 lg:flex">
         {contactLinks.map((link) => (
-          <Link key={link.name} href={link.href} target="_blank">
+          <Link key={link.name} href={link.href} target="_blank" className="opacity-70 hover:opacity-100 transition-all ease-in-out hover:-translate-y-1">
             {link.icon}
           </Link>
         ))}
@@ -70,8 +71,9 @@ export function Contacts() {
         {callToActionBtns.map((btn) => (
           <Link
             key={btn.id}
-            href={"/"}
-            className="px-10 py-4 border border-white rounded-full text-sm hover:text-black hover:bg-white"
+            href={btn.href}
+            target="_blank"
+            className="px-10 py-4 border border-white rounded-full text-sm hover:text-black hover:bg-white transition-colors ease-in-out"
           >
             {btn.btnTitle}
           </Link>

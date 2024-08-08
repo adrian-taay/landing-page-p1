@@ -3,9 +3,10 @@ import React from "react";
 import SplashImg from "@/public/splash_image.jpg";
 import ProfPic from "@/public/prof_pic.jpg";
 import { poppins } from "@/app/ui/fonts";
+import { ProfileDetails } from '@/types';
 
 export function Hero() {
-  const profileDetails = {
+  const profileDetails: ProfileDetails = {
     image: ProfPic,
     name: "Hussain Watkins",
     position: "CEO",

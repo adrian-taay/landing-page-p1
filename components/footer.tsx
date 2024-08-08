@@ -1,8 +1,9 @@
 import React from "react";
 import { GrFireball } from "react-icons/gr";
+import { FooterNotes } from "@/types";
 
 export function Footer() {
-  const footerNotes = {
+  const footerNotes: FooterNotes = {
     title: "Profit Pioneer",
     icon: <GrFireball size={32} />,
     note: "© 2024 Codebility. All rights reserved.",
